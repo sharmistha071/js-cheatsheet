@@ -33,5 +33,35 @@ arr.shift();
 console.log(arr);
 
 //reverse the array
+let revArr2 = arr2.reverse();
+console.log(revArr2);
 
-var revArr2 = arr2.reverse();
+//concate Array
+let carr = arr.concat(revArr2);
+console.log('concatenate: ' +carr);
+
+//sort
+let srr1 = [100,2,3,50,6];
+let srr = srr1.sort();
+console.log('srr: '+srr);  //100,2,3,50,6 -> sort using first number
+
+//using compare function
+srr = srr1.sort(function(x,y){
+  return x-y;
+});
+console.log('srr: '+srr);
+////using compare function
+srr = srr1.sort(function(x,y){
+  return y-x;
+});
+console.log('rev srr: '+srr);
+
+
+//find
+let dummy_arr = [3,4,89,49];
+function  under50(num){
+  return num < 50;
+}
+
+let find_num = dummy_arr.find(under50); //return first number which is under 50
+console.log('find_num: ' +find_num);
