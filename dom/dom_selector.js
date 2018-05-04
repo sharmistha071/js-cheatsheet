@@ -83,3 +83,45 @@ const liOdd = document.querySelectorAll('li:nth-child(odd)');
 liOdd.forEach(function(item){
   item.style.background = '#eee';
 });
+
+
+/*...........................create element................................*/
+
+const li = document.createElement('li');
+
+//Add class
+li.className = 'collection-item';
+
+//Add id
+li.id = 'new-id';
+li.innerHTML = 'new li';
+console.log(li);
+document.querySelector('ul.collection').appendChild(li);
+
+
+/*..............replace element......................*/
+let newH2 = document.createElement('h2');
+console.log(newH2);
+newH2.appendChild(document.createTextNode('Task lists'));
+
+let oldHeading = document.querySelector('#task-title');
+console.log(oldHeading);
+//parent
+const cardAction = document.querySelector('.card-action');
+cardAction.replaceChild(newH2, oldHeading);
+
+
+/*...............Remove element......................*/
+let list = document.querySelector('ul');
+lis[0].remove();
+
+console.log(list);
+
+// remove chhild elemet
+
+list.removeChild(lis[3]);
+
+
+// Attribute
+//getAttribute('href');
+//setAttribute('href', 'www.facebook.com');
